@@ -8,13 +8,12 @@ export const getDataCharacters = createAsyncThunk('personajes/getData', async(ar
         console.log(data);
         return data;
     } catch (error) {
-        rejectWithValue(error.response.data)
+        console.error(error);
+        return rejectWithValue(`Error al obtener datos de países: ${error.message}`);
     }
 })
 
-export const nameCharacters = createAsyncThunk(
-    'personajes/getN',
-    async (name, { rejectWithValue }) => {
+export const nameCharacters = createAsyncThunk('personajes/getN', async (name, { rejectWithValue }) => {
         try {
             const { data } = await axios.get(`http://localhost:3001/characters?name=${name}`);
             console.log(data);

@@ -9,7 +9,7 @@ const fetchSingleCharacter = (id) => {
     .then(res => res.json())
 }
 
-export default async function Post({ children, params }) {
+export default async function Pagination({ children, params }) {
 
     const {id} = params
     const idCharacter = await fetchSingleCharacter(id)

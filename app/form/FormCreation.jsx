@@ -115,29 +115,22 @@ export function  FormCreation(){
 
                 <div className='max-w-[600px] m-auto md:pl-20 p-4 py-24 translate-y-20'>
                     <div className='flex flex-col justify-between items-center content-center w-full'>
-                        <form className='bg-blue-300 p-4' onSubmit={(e) => handleSubmit(e)}>
+                        <form className='bg-violet-500/50 p-4 rounded-lg' onSubmit={(e) => handleSubmit(e)}>
                             <div className='flex flex-col'>
-                                    <label className='uppercase text-sm py-1'>Name</label>
+                                    <label className='uppercase text-sm py-1 text-white'>Name</label>
                                     <input className='border-2 rounded-lg p-2 flex border-gray-300' type='text' value={input.name} name='name' onChange={(e) => handleChange(e)}></input>                            
                                     {error.name && (<p className='text-red-500 font-bold text-xs mb-5 absolute mt-24'>{error.name}</p>)}
                                 </div>
                             <div className='grid md:grid-cols-2 gap-4 w-full py-1'>
                                 
                                 <div className='flex flex-col'>
-                                    <label className='uppercase text-sm py-1'>Image</label>
+                                    <label className='uppercase text-sm py-1 text-white'>Image</label>
                                     <input className='border-2 rounded-lg p-2 flex border-gray-300' type='text' value={input.image} name='image' onChange={(e) => handleChange(e)}></input>                            
                                     {error.image && (<p className='text-red-500 font-bold text-xs mb-5 absolute mt-24'>{error.image}</p>)}
                                 </div>
-                                
-                                        
-                                {/* <div className='flex flex-col'>
-                                    <label className='uppercase text-sm py-2'>Origin</label>
-                                    <input className=' border-2 rounded-lg p-3 flex border-gray-300' min="1" type='text' value={input.origin} name = 'origin' onChange={(e) => handleChange(e)}></input>                            
-                                    {error.origin && (<p className='text-red-500 font-bold text-xs mb-5 absolute mt-24'>{error.origin}</p>)}
-                                </div> */}
                                 <div className='flex flex-col py-1'>
 
-                                    <label className='uppercase text-sm py-1'>Origin</label>
+                                    <label className='uppercase text-sm py-1 text-white'>Origin</label>
                                     <select className='border-2 rounded-lg p-2 flex border-gray-300' name='origin' onChange={e=>handleSelect(e)}>
                                         
                                         {personaje && personaje.length > 0 && personaje.map((p, index)=>( 
@@ -150,7 +143,7 @@ export function  FormCreation(){
                             <div className='grid md:grid-cols-2 gap-4 w-full py-1'>
                             
                                 <div className='flex flex-col py-1'>
-                                    <label className='uppercase text-sm py-1'>Status</label>
+                                    <label className='uppercase text-sm py-1 text-white'>Status</label>
                                     <select className='border-2 rounded-lg p-2 flex border-gray-300' name='status' onChange={(e) => handleChange(e)}>
                                         <option value=''>All Status</option>
                                         <option value={"Alive"}>Alive</option>
@@ -160,7 +153,7 @@ export function  FormCreation(){
                                     {error.status && (<p className='text-red-500 font-bold text-xs mb-5 absolute mt-24'>{error.status}</p>)}
                                 </div>
                                 <div className='flex flex-col py-1'>
-                                    <label className='uppercase text-sm py-1'>Species</label>
+                                    <label className='uppercase text-sm py-1 text-white'>Species</label>
                                     <select className='border-2 rounded-lg p-2 flex border-gray-300' name='species' onChange={(e) => handleChange(e)}>
                                         <option value=''>All Species</option>
                                         <option value={"Human"}>Human</option>
@@ -173,7 +166,7 @@ export function  FormCreation(){
 
                             <div className='grid md:grid-cols-2 gap-4 w-full py-1'> 
                                 <div className='flex flex-col py-2'>
-                                    <label className='uppercase text-sm py-1'>Gender</label>
+                                    <label className='uppercase text-sm py-1 text-white'>Gender</label>
                                     <select className='border-2 rounded-lg p-2 flex border-gray-300' name='gender' onChange={(e) => handleChange(e)}>
                                         <option value=''>All Gender</option>
                                         <option value={"Female"}>Female</option>
@@ -186,7 +179,7 @@ export function  FormCreation(){
                                 
                                 <div className='flex flex-col py-1'>
 
-                                    <label className='uppercase text-sm py-1'>Episodes</label>
+                                    <label className='uppercase text-sm py-1 text-white'>Episodes</label>
                                     <select className='border-2 rounded-lg p-2 flex border-gray-300' name='episode' onChange={e=>handleSelect(e)}>
                                         
                                         {episodio && episodio.length > 0 && episodio.map((p, index)=>( 
@@ -205,7 +198,7 @@ export function  FormCreation(){
                                     </div>
                                 }
                             
-                            <button className='text-gray-100 bg-[#001b5e] rounded-md mt-4 w-full p-4 hover:bg-pink-700 justify-between' type="submit">
+                            <button className='text-gray-100 bg-[#001b5e] rounded-md mt-4 w-full p-4 hover:bg-violet-700 justify-between' type="submit">
                                 Create
                             </button>
                                 
@@ -213,9 +206,6 @@ export function  FormCreation(){
                     </div>
                     
                     <div>
-                        {/* {input.paises.map((e) => (
-                            <ul className='rounded-2xl w-250 h-20 bg-gray-800'><h4>{e}</h4><button className='bg-gray-800 rounded-2xl w-50 h-20 text-white p-20' onClick={()=>handleDelete(e)}>X</button></ul>                          
-                        ))}                */}
                         {input.episode && input.episode.length > 0 && input.episode.map((episodio, index) => (
                             <div className='flex flex-row justify-center items-center gap-6 ' key={index}>
                                 <span className='bg-blue-300 rounded-2xl w-10 flex justify-center content-center'>{episodio}</span>

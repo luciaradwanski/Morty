@@ -8,7 +8,7 @@ let allChars = []
 //         const response = await axios.get("https://rickandmortyapi.com/api/character")
 //         let characters = response.data
         
-//         for (let i = 0; i < 41; i++) {
+//         for (let i = 0; i <= 42; i++) {
 //             for (const el of characters.results) {
 //                 allChars[i] = {
 //                     id: el.id,

@@ -3,7 +3,7 @@ import Image from 'next/image';
 export function About(){
 
   return (
-    <div className='mt-24 p-8 text-center bg-white'>
+    <div className='mt-24 p-8 text-center bg-violet-500/50'>
       <p className='font-semibold text-black uppercase'>About Me</p>
 
       <div className='flex justify-between row-auto'>
